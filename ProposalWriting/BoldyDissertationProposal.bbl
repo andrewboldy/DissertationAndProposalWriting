@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+
+\bibitem{Brivio_2019}
+Ilaria Brivio and Michael Trott.
+\newblock The standard model as an effective field theory.
+\newblock {\em Physics Reports}, 793:1–98, February 2019.
+
+\bibitem{CalibbiSignorelli2018CLFVIntro}
+Lorenzo Calibbi and Giovanni Signorelli.
+\newblock Charged lepton flavour violation: An experimental and theoretical
+  introduction.
+\newblock {\em La Rivista del Nuovo Cimento}, 41:71--174, 2018.
+
+\bibitem{Pontecorvo1968NeutrinoLeptonCharge}
+B.~Pontecorvo.
+\newblock Neutrino experiments and the problem of conservation of leptonic
+  charge.
+\newblock {\em Sov. Phys. JETP}, 26(5):984--988, 1968.
+\newblock English translation of Zh. Eksp. Teor. Fiz. 53 (1967) 1717--1725.
+
+\bibitem{GIMMechanism1970}
+S.~L. Glashow, J.~Iliopoulos, and L.~Maiani.
+\newblock Weak interactions with lepton-hadron symmetry.
+\newblock {\em Phys. Rev. D}, 2:1285--1292, Oct 1970.
+
+\bibitem{NewProcess2010}
+Masafumi Koike, Yoshitaka Kuno, Joe Sato, and Masato Yamanaka.
+\newblock New process for charged lepton flavor violation searches:
+  ${\ensuremath{\mu}}^{\ensuremath{-}}{e}^{\ensuremath{-}}\ensuremath{\rightarrow}{e}^{\ensuremath{-}}{e}^{\ensuremath{-}}$
+  in a muonic atom.
+\newblock {\em Phys. Rev. Lett.}, 105:121601, Sep 2010.
+
+\bibitem{ImprovedAnalyses2016}
+Yuichi Uesaka, Yoshitaka Kuno, Joe Sato, Toru Sato, and Masato Yamanaka.
+\newblock Improved analyses for
+  ${\ensuremath{\mu}}^{\ensuremath{-}}{e}^{\ensuremath{-}}\ensuremath{\rightarrow}{e}^{\ensuremath{-}}{e}^{\ensuremath{-}}$
+  in muonic atoms by contact interactions.
+\newblock {\em Phys. Rev. D}, 93:076006, Apr 2016.
+
+\bibitem{Bernstein2019}
+Robert~H. Bernstein.
+\newblock The mu2e experiment.
+\newblock {\em Frontiers in Physics}, Volume 7 - 2019, 2019.
+
+\bibitem{Mu2eTDR}
+L.~Bartoszek et~al.
+\newblock {Mu2e} technical design report.
+\newblock Technical Design Report Fermilab-TM-2594 and Fermilab-DESIGN-2014-01,
+  Fermi National Accelerator Laboratory, March 2015.
+
+\bibitem{Brown2024KinKal}
+David~N. Brown.
+\newblock {KinKal}: A kinematic kalman filter track fitting package for the
+  {Mu2e} experiment.
+\newblock In {\em EPJ Web of Conferences}, volume 295, page 06001, 2024.
+
+\end{thebibliography}
