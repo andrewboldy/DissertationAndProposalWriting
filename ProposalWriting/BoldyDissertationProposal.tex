@@ -652,15 +652,7 @@ The primary research goal of this dissertation is: \textbf{produce a full, stati
 \end{itemize}
 \textit{Deliverables for goal number 1:} Mu2e analyzable helix data structure and vertexing module developed and integrated into production/analysis workflow for relevant processes. Technical paper detailing the vertexing implementation in the Mu2e Experiment as well as an internal note detailing the use of the system.
 
-\item The next priority is \textbf{implementation of true theoretical differential templates that account for nuclear recoil in the aluminum stopping target.} This process requires input from the associated theorists in the calculation process and as such the timeline is subject to change. Necessary details in the progression to this goal involve:
-\begin{itemize}
-    \item Derivation of closed form differential distribution functions to sample from in the generator stages for various interaction structures (photonic and contact) for the $\muEtoEE$ conversion in the presence of aluminum nuclei.
-    \item Calculation of relative probabilities of types of interaction based on available phase space.
-    \item Creation of a generator that accurately throws events based on the predicted weights of angular distribution and energy content of final state electrons.
-\end{itemize}
-\textit{Deliverables for goal number 2:} Mu2e generator for the full $\muEtoEE$ process in the Mu2e experiment stopping target and a technical paper written alongside contributing theorists detailing the generator construction, implementation and theoretical background. An internal note for the Mu2e collaboration detailing the creation and use of the new generator as well as the sampling process.
-
-\item The third priority is to \textbf{create a mixed data sample of the theoretically accurate process with relevant backgrounds.} The channel of interest is not the only process (and not the most prominent one) to exist inside the detector system during a configured run. To account for this, the pure process must be mixed with the relevant backgrounds. This goal will be completed in stages in order to determine the obscuring effects of each considered background and then compiled together for a full sensitivity prediction. The principle background is the muon decay-in-orbit that produces the Michel spectrum peaked at the energy level of our desired process. Other backgrounds that could influence the signal resolution include the cosmic ray background, radiative muon/pion capture as well as beam noise. The mixing process requires complicated scripts run to form large datasets in the computing grid, and thus, the core production team will be consulted regarding the appropriate procedure for this phase of analysis. 
+\item The next priority is to \textbf{create a mixed data sample of the back-to-back generator with relevant backgrounds.} The channel of interest is not the only process (and not the most prominent one) to exist inside the detector system during a configured run. To account for this, the pure process must be mixed with the relevant backgrounds. This goal will be completed in stages in order to determine the obscuring effects of each considered background and then compiled together for a full sensitivity prediction. The principle background is the muon decay-in-orbit that produces the Michel spectrum peaked at the energy level of our desired process. Other backgrounds that could influence the signal resolution include the cosmic ray background, radiative muon/pion capture as well as beam noise. The mixing process requires complicated scripts run to form large datasets in the computing grid, and thus, the core production team will be consulted regarding the appropriate procedure for this phase of analysis. 
 
 All this being said, no sensitivity study would be complete without a thorough, layered analysis of the influence of different backgrounds and a full background study of the process of interest. The supporting steps to achieving this goal are
 \begin{itemize}
@@ -669,12 +661,33 @@ All this being said, no sensitivity study would be complete without a thorough, 
 \item create a more robust signal identification discrimination process. Once mixing occurs, improved discrimination of large numbers of track per event will need to be investigated as well in order to make selections between similarities between process tracks and background tracks that appear in the same event. Background tracks, especially those DIO electrons will possess energy that can appear to be the same as the signal electrons. As a result, more sophisticated techniques and constraints for eliminating nonsense tracks will have to be utilized to prevent obfuscation of process tracks in an event or misidentification. Such tools could rely on implementations to specific configurations of the trigger, further identification of signal characteristics in different detector components (calorimeter, tracker, extra-detector scintillation), or even angular dependence in the calorimeter. A possible avenue that may be employed is the implementation of artificial intelligence or machine-learning (AI/ML) tools trained on specific process identification criteria.
 \item perform statistical analysis to determine the required number of verified signal events to obtain significance or the number of incident protons on target (and thus, wall-clock hours) needed to surpass the constraints set by SINDRUM previous limit of similar processes as well as direct measurement
 \end{itemize}
-\textit{Deliverables for goal number 3:} Analyzable simulation data set of pure and mixed process. A robust track discrimination process can be implemented for the process in the Mu2e computing environment. A proposal can be put out to the Mu2e collaboration for specific configuration runs at half-field in the active running stages depending on results. 
+\textit{Deliverables for goal number 2:} Analyzable simulation data set of pure and mixed process. A robust track discrimination process can be implemented for the process in the Mu2e computing environment. A proposal can be put out to the Mu2e collaboration for specific configuration runs at half-field in the active running stages depending on results.
+
+\item The third priority is \textbf{implementation of true theoretical differential templates that account for nuclear recoil in the aluminum stopping target at high statistics.} As stated above at the end of \S~ \ref{sec:InitialInvestigation}, the generator does not account for the full kinematics of the process of interest and just throws electrons back-to-back at a prescribed energy of half the muon rest mass. The calculation of the differential templates described in equation \ref{eqn:differentialTemplate} for the $\muEtoEE$ process in an aluminum stopping target requires input from the collaborating theorists. The calculation should yield corrections to the energy and angular distribution of the thrown electrons similar to the figure shown for the $g_1$ type $^{208}\text{Pb}$ and as such, the photonic and contact term interactions must be calculated for the given atomic number $Z=13$ utilizing nonrelativistic partial wave approaches. Even being agnostic to the true physics, assuming that the decrease in $Z$ does not significantly impact the back-to-back nature and energy spectrum, the generator improvement would improve the accuracy of the predictions made of the mixed sample, especially at high statistics. Necessary details in the progression to this goal involve:
+\begin{itemize}
+    \item Derivation of closed form differential distribution functions to sample from in the generator stages for various interaction structures (photonic and contact) for the $\muEtoEE$ conversion in the presence of aluminum nuclei (completed by phenomenologist collaborators Sudheer Muhammad and Alexey Petrov at the University of South Carolina) using nonrelativistic field theoretic and partial wave approaches
+    \item Calculation of relative probabilities of types of interaction based on available phase space (completed by phenomenologist collaborators Sudheer Muhammad and Alexey Petrov at the University of South Carolina).
+    \item Creation of a generator correctly implemented into the Mu2e Offline computing environment  that accurately throws events based on the predicted weights of angular distribution and energy content of final state electrons (to be completed by Andrew Boldy)
+    \item Simulation of the full $\muEtoEE$ generator in the Production workflow of the Mu2e simulation system at high statistics 
+\end{itemize}
+\textit{Deliverables for goal number 3:} Mu2e generator for the full $\muEtoEE$ process in the Mu2e experiment stopping target and a technical paper written alongside contributing theorists detailing the generator construction, implementation and theoretical background. An internal note for the Mu2e collaboration detailing the creation and use of the new generator as well as the sampling process.
+ 
+    \item Following the implementation of the full generator, the next goal will be to \textbf{perform a full sensitivity study of the $\muEtoEE$ process in the Mu2e experimental design along with thorough statistical analysis to determine the required number of counts, generalized visibility of signal, and required run duration at configuration to match or exceed current limits set by other experimental investigations.} The sensitivity study will determine how adequately the specially configured Mu2e experiment will be able to detect and identify a process in the $\muEtoEE$ channel, accounting for theoretical kinematic requirements, obscuring backgrounds, and instrumentation limitations. A proper sensitivity study should be able to scale a number of counts for various confidence/significance levels, predict experimental signal visibility among other detector noise, predict a required run time for different levels of significance and sensitivity, and determine extraneous configuration requirements (proton beam intensity, additional stop considerations, efficiencies, etc.) all while maintaining a statistically significant and experimentally accurate data set. In order to accomplish this goal, the following sub-goals must be achieved:
+\begin{itemize}
+    \item Validate the configuration geometry, magnetic fields, trigger settings, generator implementation, detector digitization results, and reconstruction products in order to best determine the total efficiency of the experiment for this channel.
+    \item Calculate optimal proton beam intensity to reduce pileup to a manageable level while still maintaining high enough statistics to check the channel
+    \item Perform X statistical analysis tests for A reason %need to investigate required statistical checks and hypotheses for a rigorous sensitivity study
+    \item Perform Y statistical analysis tests for B reason
+    \item Perform Z statistical analysis tests for C reason
+    \item Utilizing the results of the above statistical tests, determine the required number of identified channel events required in order to produce results of various significances as well as duration required to match and improve previously achieved sensitivities in the absence of events correcting for background influences.
+\end{itemize}
+\textit{Deliverables for goal number 4:} Full detail predictions of anticipated sensitivity to $\muEtoEE$ channel in the Mu2e experiment. Statistical analysis toolbox development for analyzing this particular channel. Calculation of required intensity of proton beam intensity and number of wall clock hours. A formal request for specified run configurations based on these results and an internal note of analyzability of this particular channel given those configurations in the case of run configuration approval during experiment active periods.
+ 
     \item The culmination of all these goals will be to \textbf{produce a full written dissertation document detailing the sensitivity study of the $\muEtoEE$ process in the Mu2e Experiment.} 
 \textit{Deliverables for final goal:} Full written and defended dissertation in compliance with the requirements for graduation with a PhD in Physics at the University of South Carolina. Short paper detailing results for publication. Internal note to the Mu2e collaboration for analysis requirements and predictions of the $\muEtoEE$ process.
 \end{enumerate}
 
-Along with accomplishing the constructive goals for the completion of the primary research goals, additional goals for professional/academic development include (funding and time permitting): %unsure if any of these need to be included, but noticed similar thoughts in other proposals, definitely weakest section
+Along with accomplishing the constructive goals for the completion of the primary research goals, additional goals for professional/academic development include (funding and time permitting): 
 \begin{itemize}
     \item Poster/Presentation for Discover USC or Three Minute Thesis at USC
     \item NAPP Seminar presentation at the University of South Carolina
@@ -688,57 +701,53 @@ Along with accomplishing the constructive goals for the completion of the primar
 
 The timeline below presents the expected benchmarks for the dissertation research beginning in Fall 2026 and culminating in a planned Spring 2028 graduation. Several activities, including generator development, background studies, and dissertation writing, will overlap. Dates associated with theoretical input and collaboration computing resources may be adjusted as the work progresses.
 
+\newgeometry{left=0.45in,right=0.45in,top=0.65in,bottom=0.65in}
 \begin{landscape}
 \begin{table}[p]
 \centering
-\caption{Expected timeline and benchmark deliverables for the \(\mu^- e^- \rightarrow e^- e^-\) sensitivity study.}
+\caption{Expected timeline and benchmark deliverables for the
+\(\mu^- e^- \rightarrow e^- e^-\) sensitivity study.}
 \label{tab:DissertationTimeline}
-\renewcommand{\arraystretch}{1.3}
+
 \small
-\begin{tabularx}{\linewidth}{p{0.16\linewidth} X X}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+
+\begin{tabular}{p{2.2cm} p{10.0cm} p{10.0cm}}
 \toprule
-\textbf{Period} & \textbf{Primary research benchmarks} & \textbf{Expected outputs} \\
+\textbf{Period} &
+\textbf{Primary research benchmarks} &
+\textbf{Expected outputs} \\
 \midrule
 
-Fall 2026
-&
-Dissertation proposal defense on October 8, 2026. Examine reconstructed Mu2e data products, including stored helix parameterizations and covariance matrices. Identify initial limitations of the existing vertexing approach.
-&
-Approved dissertation proposal and passed comprehensive examination; vertexing-development plan; documented understanding of relevant reconstruction data products.
-\\
+Fall 2026 &
+Defend the dissertation proposal on October 8, 2026. Examine reconstructed Mu2e data products, including stored helix parameterizations and covariance matrices. Identify limitations of the existing vertexing procedure and define the requirements for a generalized, robust vertexing workflow. &
+Approved dissertation proposal; documented reconstruction-product study; vertexing-development plan and initial technical benchmarks. \\
+\addlinespace
 
-Spring 2027
-&
-Develop an analyzable helix-data structure for vertexing studies. Investigate common-origin position and time reconstruction using helical parameterizations. Implement and test initial improvements to the vertexing algorithm resolution with MC truth.
-&
-Prototype helix-analysis data product; preliminary vertexing module; initial validation with pure-process simulation.
-\\
+Spring 2027 &
+Develop an analyzable helix-data structure and investigate common-origin position and time reconstruction using helical parameterizations. Implement and validate initial improvements to the vertexing module using pure \(\muEtoEE\) simulation. Begin studying individual backgrounds using the existing back-to-back generator. &
+Prototype helix-analysis data product; preliminary generalized vertexing module; initial validation results; individual-background study framework. \\
+\addlinespace
 
-Summer 2027
-&
-Refine and validate the vertexing workflow. Integrate the analysis products with the Mu2e art and FHiCL framework. Begin receiving and incorporating theoretical input for differential templates.
-&
-Validated vertexing workflow for pure-process data; preliminary technical documentation; theoretical framework for generator development.
-\\
+Summer 2027 &
+Refine and integrate the vertexing workflow into the Mu2e art and FHiCL environment. Consult with the Mu2e production team regarding large-scale mixing procedures. Produce initial background-overlaid samples and investigate DIO pileup at half field. &
+Validated vertexing workflow; analyzable preliminary mixed samples; initial DIO pileup and beam-intensity requirements; vertexing technical documentation. \\
+\addlinespace
 
-Fall 2027
-&
-Implement differential templates and phase-space-dependent interaction weights for photonic and contact contributions, including nuclear recoil effects. Develop and validate the event generator. Begin individual background studies, with particular attention to DIO intensity requirements at half field.
-&
-Working weighted \(\mu^- e^- \rightarrow e^- e^-\) generator; generator-validation results; preliminary background-characterization studies.
-\\
+Fall 2027 &
+Expand mixed-sample studies to include DIO, cosmic-ray, radiative pion-capture, radiative muon-capture, and beam-related backgrounds. Develop improved signal--background discrimination criteria. Implement the completed theoretical differential templates and interaction weights in the Mu2e generator, then begin high-statistics production. Establish the statistical-analysis framework, including definitions of the sensitivity metric, signal and background hypotheses, and required confidence or significance levels. &
+Mixed-background characterization results; preliminary track-discrimination procedure; theoretically weighted \(\muEtoEE\) generator; initial high-statistics samples; preliminary statistical-analysis framework. \\
+\addlinespace
 
-Spring 2028
-&
-Construct mixed signal--background samples and perform the sensitivity study. Determine the required signal statistics, protons on target, and wall-clock time needed to surpass the previous SINDRUM constraint. Complete dissertation writing, review, and defense preparation.
-&
-Completed sensitivity study; analyzable pure and mixed simulation samples; dissertation submitted and defended; Mu2e internal note and publication-ready results.
-\\
-
+Spring 2028 &
+Use the full generator and mixed samples to complete the sensitivity study. Validate simulation configuration, reconstruction efficiency, and signal selections. Apply the statistical-analysis framework to determine signal visibility, required identified-event counts, proton-on-target intensity, and wall-clock time needed to meet or exceed existing limits. Complete dissertation writing and defense preparation. &
+Full sensitivity estimate for the \(\muEtoEE\) channel; statistical-analysis toolbox; required event-count, beam-intensity, and run-duration estimates; recommended experimental configuration; dissertation submitted and defended; Mu2e internal note and publication-ready results. \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
 \end{landscape}
+\restoregeometry
 
 \bibliographystyle{unsrt}
 \bibliography{References/proposalReferences}
