@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Brivio_2019}
 Ilaria Brivio and Michael Trott.
@@ -53,5 +53,16 @@ David~N. Brown.
 \newblock {KinKal}: A kinematic kalman filter track fitting package for the
   {Mu2e} experiment.
 \newblock In {\em EPJ Web of Conferences}, volume 295, page 06001, 2024.
+
+\bibitem{MLAnomalyDetectionParticlePhysics2023}
+Vasilis Belis, Patrick Odagiu, and Thea~Klaeboe Aarrestad.
+\newblock Machine learning for anomaly detection in particle physics.
+\newblock {\em Reviews in Physics}, 12:100091, December 2024.
+
+\bibitem{FeldmanCousinsStatistics}
+Gary~J. Feldman and Robert~D. Cousins.
+\newblock Unified approach to the classical statistical analysis of small
+  signals.
+\newblock {\em Physical Review D}, 57(7):3873–3889, April 1998.
 
 \end{thebibliography}

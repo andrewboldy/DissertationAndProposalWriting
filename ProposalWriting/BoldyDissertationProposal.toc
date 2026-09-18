@@ -12,4 +12,4 @@
 \contentsline {subsection}{\numberline {3.4}Vertexer Development and Validation}{16}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Proposed Work}{20}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Dissertation Goals and Deliverables to be Completed and Collected}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Dissertation Timeline}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Dissertation Timeline}{25}{subsection.4.2}%
