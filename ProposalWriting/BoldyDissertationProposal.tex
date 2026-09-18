@@ -167,7 +167,7 @@ with the Feynman diagram seen in figure \ref{feyn:SMMuonDecayFeynDiagram}
 
 \begin{figure}[h!]
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture} 
 \begin{feynman}
 
     \vertex (mu) at (-2,0) {\(\mu^-\)};
@@ -676,7 +676,7 @@ All this being said, no sensitivity study would be complete without a thorough, 
 \begin{itemize}
     \item Validate the configuration geometry, magnetic fields, trigger settings, generator implementation, detector digitization results, and reconstruction products in order to best determine the total efficiency of the experiment for this channel.
     \item Calculate optimal proton beam intensity to reduce pileup to a manageable level while still maintaining high enough statistics to check the channel
-    \item Perform X statistical analysis tests for A reason %need to investigate required statistical checks and hypotheses for a rigorous sensitivity study
+    \item Perform Feldman-Cousins procedure to set an upper confidence interval limit for null results and a two sided confidence interval for measurement results of the given signal \cite{FeldmanCousinsStatistics} 
     \item Perform Y statistical analysis tests for B reason
     \item Perform Z statistical analysis tests for C reason
     \item Utilizing the results of the above statistical tests, determine the required number of identified channel events required in order to produce results of various significances as well as duration required to match and improve previously achieved sensitivities in the absence of events correcting for background influences.
