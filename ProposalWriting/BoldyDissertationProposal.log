@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  22 SEP 2026 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  22 SEP 2026 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,16 +1146,12 @@ n input line 306.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package natbib Warning: Citation `KumarPetrov2026MuonicAtoms' on page 6 undefin
-ed on input line 311.
-
 [6]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <./Images/TheoryImages/PbDifferentialTemplate.png>]
-<Images/ExperimentImages/Schematics/Mu2eExperimentSchematic.png, id=168, 1169.3
+<Images/ExperimentImages/Schematics/Mu2eExperimentSchematic.png, id=171, 1169.3
 6874pt x 447.6725pt>
 File: Images/ExperimentImages/Schematics/Mu2eExperimentSchematic.png Graphic fi
 le (type png)
@@ -1212,7 +1208,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [10]
-<Images/GeneratorTestImages/GenTest_HundredThousandAngularDist.png, id=194, 720
+<Images/GeneratorTestImages/GenTest_HundredThousandAngularDist.png, id=196, 720
 .6925pt x 698.61pt>
 File: Images/GeneratorTestImages/GenTest_HundredThousandAngularDist.png Graphic
  file (type png)
@@ -1220,7 +1216,7 @@ File: Images/GeneratorTestImages/GenTest_HundredThousandAngularDist.png Graphic
 Package pdftex.def Info: Images/GeneratorTestImages/GenTest_HundredThousandAngu
 larDist.png  used on input line 447.
 (pdftex.def)             Requested size: 144.13594pt x 139.71951pt.
-<Images/GeneratorTestImages/GenTest_HundredThousandThetaThetaPlot.png, id=196, 
+<Images/GeneratorTestImages/GenTest_HundredThousandThetaThetaPlot.png, id=198, 
 331.2375pt x 294.09875pt>
 File: Images/GeneratorTestImages/GenTest_HundredThousandThetaThetaPlot.png Grap
 hic file (type png)
@@ -1228,7 +1224,7 @@ hic file (type png)
 Package pdftex.def Info: Images/GeneratorTestImages/GenTest_HundredThousandThet
 aThetaPlot.png  used on input line 454.
 (pdftex.def)             Requested size: 165.61833pt x 147.04901pt.
-<Images/GeneratorTestImages/GenTest_HundredThousandMCTruthMom.png, id=198, 322.
+<Images/GeneratorTestImages/GenTest_HundredThousandMCTruthMom.png, id=200, 322.
 20375pt x 301.125pt>
 File: Images/GeneratorTestImages/GenTest_HundredThousandMCTruthMom.png Graphic 
 file (type png)
@@ -1249,7 +1245,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [11] [12 <./Images/GeneratorTestImages/GenTest_HundredThousandAngularDist.png> 
 <./Images/GeneratorTestImages/GenTest_HundredThousandThetaThetaPlot.png> <./Ima
 ges/GeneratorTestImages/GenTest_HundredThousandMCTruthMom.png>]
-<Images/ExperimentImages/Data/EventDisplayTwoTrackEvent.png, id=217, 1053.9375p
+<Images/ExperimentImages/Data/EventDisplayTwoTrackEvent.png, id=219, 1053.9375p
 t x 313.17pt>
 File: Images/ExperimentImages/Data/EventDisplayTwoTrackEvent.png Graphic file (
 type png)
@@ -1263,7 +1259,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13]
 <Images/TrkSegsImages/AuxillaryReco/RecoTrackSegmentMomentumOverlay_AllCutsAndM
-CTruth.png, id=229, 1514.65875pt x 1045.9075pt>
+CTruth.png, id=231, 1514.65875pt x 1045.9075pt>
 File: Images/TrkSegsImages/AuxillaryReco/RecoTrackSegmentMomentumOverlay_AllCut
 sAndMCTruth.png Graphic file (type png)
 <use Images/TrkSegsImages/AuxillaryReco/RecoTrackSegmentMomentumOverlay_AllCuts
@@ -1277,7 +1273,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14 <./Images/ExperimentImages/Data/EventDisplayTwoTrackEvent.png>]
 <Images/ExperimentImages/Data/MonteCarloTruthSurvivingReconstructedTracks.png, 
-id=239, 581.17125pt x 456.70625pt>
+id=241, 581.17125pt x 456.70625pt>
 File: Images/ExperimentImages/Data/MonteCarloTruthSurvivingReconstructedTracks.
 png Graphic file (type png)
 <use Images/ExperimentImages/Data/MonteCarloTruthSurvivingReconstructedTracks.p
@@ -1296,7 +1292,7 @@ ReconstructedTracks.png>]
 LaTeX Warning: Reference `app:GeoParameters' on page 17 undefined on input line
  582.
 
-<Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png, id=254, 653.44125pt x 343.28
+<Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png, id=256, 653.44125pt x 343.28
 25pt>
 File: Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png Graphic file (type png)
 <use Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png>
@@ -1306,7 +1302,7 @@ Package pdftex.def Info: Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/TrkSegsImages/Vertexer/Vertexer_2D_Histograms.png, id=256, 989.6975pt x
+<Images/TrkSegsImages/Vertexer/Vertexer_2D_Histograms.png, id=258, 989.6975pt x
  475.7775pt>
 File: Images/TrkSegsImages/Vertexer/Vertexer_2D_Histograms.png Graphic file (ty
 pe png)
@@ -1316,7 +1312,7 @@ ng  used on input line 613.
 (pdftex.def)             Requested size: 395.87198pt x 190.30762pt.
 [17] [18 <./Images/TrkSegsImages/Vertexer/Vertexer_Drawn.png> <./Images/TrkSegs
 Images/Vertexer/Vertexer_2D_Histograms.png>]
-<Images/TrkSegsImages/Vertexer/Vertexer_XYZR_Resolution.png, id=276, 1514.65875
+<Images/TrkSegsImages/Vertexer/Vertexer_XYZR_Resolution.png, id=278, 1514.65875
 pt x 728.7225pt>
 File: Images/TrkSegsImages/Vertexer/Vertexer_XYZR_Resolution.png Graphic file (
 type png)
@@ -1371,23 +1367,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 772--772
 []|\T1/lmr/m/n/10 Fall 2028--
  []
 
-[27] (./BoldyDissertationProposal.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-[28
+[27] (./BoldyDissertationProposal.bbl) [28
 
 
 
 
 
 
-] (./BoldyDissertationProposal.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+] (./BoldyDissertationProposal.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1403,7 +1390,7 @@ ed.
 Here is how much of TeX's memory you used:
  27164 strings out of 467525
  534730 string characters out of 5418982
- 957666 words of memory out of 5000000
+ 957682 words of memory out of 5000000
  55470 multiletter control sequences out of 15000+600000
  735456 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1425,10 +1412,10 @@ mri12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
 /texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/20
 26/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2026/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on BoldyDissertationProposal.pdf (28 pages, 6610850 bytes).
+Output written on BoldyDissertationProposal.pdf (28 pages, 6610922 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
+ 460 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
  90 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
