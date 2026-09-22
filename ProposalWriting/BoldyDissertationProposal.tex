@@ -308,7 +308,7 @@ are outlined and constrained with specific attention paid to affects in $^{208}\
     \label{fig:PbDifferentialTemplate}
 \end{figure}
 
-Theory points towards this process as a viable experimental channel to test given it's wide phase space and sensitivity to short and long lived mediators as well as variability in wave function overlap given variation of atomic number (charge). It is an investigation of this specific process in the Mu2e experiment that is the principle goal of this dissertation research proposal.
+Theory points towards this process as a viable experimental channel to test given it's wide phase space and sensitivity to short and long lived mediators as well as variability in wave function overlap given variation of atomic number (charge). Especially active models that are being investigated by phenomenologists include axion-like particles and other short heavy lived mediators that may contribute to BSM physics. \cite{KumarPetrov2026MuonicAtoms} It is an investigation of this specific process in the Mu2e experiment that is the principle goal of this dissertation research proposal.
 
 \subsection{Previous Tests of Charged Lepton Flavor Violation} \label{subsec:PreviousTests}
 
@@ -375,6 +375,7 @@ $\mu^-e^- \to e^-e^-$
 \end{tabular}
 \end{table}
 
+The current limits set by the experiments shown in table \ref{tab:clfv_limits} demonstrate areas that can be improved with next generation detector systems, especially those at the intensity frontier of particle physics research. The Mu2e experiment, Mu3e, and other next generation experimental designs are looking for improvements to these sensitivities to further constrain theoretical models describing CLFV processes.
 %================================================
 % 2. Experimental Motivation and Signature
 %================================================
@@ -672,20 +673,20 @@ All this being said, no sensitivity study would be complete without a thorough, 
 \end{itemize}
 \textit{Deliverables for goal \ref{goal:theoryGenUpdate}:} Mu2e generator for the full $\muEtoEE$ process in the Mu2e experiment stopping target and a technical paper written alongside contributing theorists detailing the generator construction, implementation and theoretical background. An internal note for the Mu2e collaboration detailing the creation and use of the new generator as well as the sampling process.
  
- \item \label{goal:MLImplementation}Following the implementation of the full generator, the plan is to \textbf{create, train, and implement machine learning (ML) tools in the anomaly detection process for flagging background-inconsistent events and statistical analysis.} Given some amount of background processes, the $\muEtoEE$ process should appear as an unusual event signature (anomaly) in the data collected under particular running conditions and in simulations. The use of ML in the detection of anomalous signals in particle physics is an up-and-coming practice with versatility in the large data analysis and signal discrimination space \cite{MLAnomalyDetectionParticlePhysics2023}, but poses many additional requirements in order to implement it appropriately:
+ \item \label{goal:MLImplementation}Following the implementation of the full generator, the plan is to \textbf{create, train, and implement machine learning (ML) tools in the anomaly detection process for flagging background-inconsistent events and statistical analysis.} Given some amount of background processes, the $\muEtoEE$ process should appear as an unusual event signature (anomaly) in the data collected under particular running conditions and in simulations. One such area that can be investigated is the origin position difference between tracks in a multi-track event. The use of ML in the detection of anomalous signals in particle physics is an up-and-coming practice with versatility in the large data analysis and signal discrimination space \cite{MLAnomalyDetectionParticlePhysics2023}, but poses many additional requirements in order to implement it appropriately:
  \begin{itemize}
     \item Collect and analyze combined background simulation sample files to investigate the properties and simulations of these pure background processes and determine common characteristics/appearances amongst events in this sample.
-     \item Identify characteristics to contribute to an anomaly-absent event feature vector $\mathbf{x}$ that also would be measurable in an anomalous event. These will store signal characteristics for both final state electrons as well as interactions with backgrounds and running conditions, $c$, in which the detector needs to be configured for anomalous process identification. These features should come strictly from reconstructed/measured products, absent of Monte Carlo truth. The complete nominal signal that would occur in the simulation under configuration conditions $c$ should appear as a mixture of backgrounds, where the mixture is defined by a density
+     \item Identify characteristics to contribute to an anomaly-absent event feature vector $\mathbf{x}$ that also would be measurable in an anomalous event. These will store signal characteristics for both final state electrons as well as interactions with backgrounds and running conditions, $c$, in which the detector needs to be configured for the specific event characteristics. These features should come strictly from reconstructed/measured products, absent of Monte Carlo truth. The complete nominal signal that would occur in the simulation under configuration conditions $c$ should appear as a mixture of backgrounds, where the mixture is defined by a density
      \begin{equation}\label{DensityFunction}
      p_B(\mathbf{x}|c)=\sum_k \pi_k(c) p_k (\mathbf{x}|c)
      \end{equation} 
      where the $k$'s enumerate the background classes (DIO, cosmics, etc), $\pi_k$'s are the associated weights given a class such that their sum is equal to one, and the $p_k$'s are the probabilities of an event $k$ to produce features $\mathbf{x}$ under conditions $c$. 
      \item Create a machine learning model (neural-net, specifically) utilizing popular compatible code bases in the Mu2e computing environment, namely Python (PyTorch, scikit-learn, and/or TensorFlow) or C++ (LibTorch or the TensorFlow C++ API). The choice of model building environment depends on the integration capabilities within Mu2e computing and grid usage for following steps.
-     \item Train the neural net on background data alone to establish a baseline structure for event feature vectors. Training methodology 
-     \item Test the neural net on the mixed data set in order to determine discrimination power of the algorithm.
-     \item Calculate sensitivity based on the performance of the model.
+     \item Train the neural net on background data alone to establish a baseline structure for event feature vectors. For ease of implementation, training methodology for simulation could be supervised (including labels of process in the background) or self-supervised (process labels being determined by data). Both approaches should be done in order to validate the approach for Monte Carlo data as well as real-run data.
+     \item Test the neural net on the various anomalous process-injected data sets in order to determine discrimination power of the algorithm. Process generators can include the $\muEtoEE$ channel, the 
+     \item Formulate a classifier procedure for anomalous signals to be used in actual running based on the sensitivity of the ML anomaly-detection and its performance.
  \end{itemize} 
- \textit{Deliverables for goal \ref{goal:MLImplementation}:} 
+ \textit{Deliverables for goal \ref{goal:MLImplementation}:} A functional anomaly detection algorithm in the Mu2e Environment for specific experimental configurations. Pure mixed-background simulation data sample in half DS field configuration. An internal Mu2e note detailing the implementation and use of the anomaly detection algorithm in a formal run setting.
  
     \item \label{goal:SensitivityStudyGoal}After the creation, training, and application of machine learning anomaly detection algorithms is complete, the next goal will be to \textbf{perform a full sensitivity study of the $\muEtoEE$ process in the Mu2e experimental design along with thorough statistical analysis to determine the required number of counts, generalized visibility of signal, and required run duration at configuration to match or exceed current limits set by other experimental investigations.} The sensitivity study will determine how adequately the specially configured Mu2e experiment will be able to detect and identify a process in the $\muEtoEE$ channel, accounting for theoretical kinematic requirements, obscuring backgrounds, and instrumentation limitations. A proper sensitivity study should be able to scale a number of counts for various confidence/significance levels, predict experimental signal visibility among other detector noise, predict a required run time for different levels of significance and sensitivity, and determine extraneous configuration requirements (proton beam intensity, additional stop considerations, efficiencies, etc.) all while maintaining a statistically significant and experimentally accurate data set. In order to accomplish this goal, the following sub-goals must be achieved:
 \begin{itemize}
@@ -699,6 +700,7 @@ All this being said, no sensitivity study would be complete without a thorough, 
 \textit{Deliverables for goal \ref{goal:SensitivityStudyGoal}:} Full detail predictions of anticipated sensitivity to $\muEtoEE$ channel in the Mu2e experiment. Statistical analysis toolbox development for analyzing this particular channel. Calculation of required intensity of proton beam intensity and number of wall clock hours. A formal request for specified run configurations based on these results and an internal note of analyzability of this particular channel given those configurations in the case of run configuration approval during experiment active periods.
  
     \item The culmination of all these goals will be to \textbf{produce a full written dissertation document detailing the sensitivity study of the $\muEtoEE$ process in the Mu2e Experiment.} 
+
 \textit{Deliverables for final goal:} Full written and defended dissertation in compliance with the requirements for graduation with a PhD in Physics at the University of South Carolina. Short paper detailing results for publication. Internal note to the Mu2e collaboration for analysis requirements and predictions of the $\muEtoEE$ process.
 \end{enumerate}
 
@@ -714,9 +716,11 @@ Along with accomplishing the constructive goals for the completion of the primar
 
 \subsection{Dissertation Timeline} \label{subsec:Timeline}
 
-The timeline below presents the expected benchmarks for the dissertation research beginning in Fall 2026 and culminating in a planned Spring 2028 graduation. Several activities, including generator development, background studies, and dissertation writing, will overlap. Dates associated with theoretical input and collaboration computing resources may be adjusted as the work progresses.
+The timeline below presents the expected benchmarks for the dissertation research beginning in Fall 2026 and culminating in a planned Winter 2028 graduation. Background characterization will begin with the existing back-to-back generator, while the full mixed-sample, machine-learning, and sensitivity studies will use the theoretically improved generator as it becomes available.
 
+\clearpage
 \newgeometry{left=0.45in,right=0.45in,top=0.65in,bottom=0.65in}
+
 \begin{landscape}
 \begin{table}[p]
 \centering
@@ -724,11 +728,11 @@ The timeline below presents the expected benchmarks for the dissertation researc
 \(\mu^- e^- \rightarrow e^- e^-\) sensitivity study.}
 \label{tab:DissertationTimeline}
 
-\small
-\renewcommand{\arraystretch}{1.25}
-\setlength{\tabcolsep}{5pt}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3pt}
 
-\begin{tabular}{p{2.2cm} p{10.0cm} p{10.0cm}}
+\begin{tabular}{p{2.3cm} p{9.8cm} p{9.8cm}}
 \toprule
 \textbf{Period} &
 \textbf{Primary research benchmarks} &
@@ -736,32 +740,44 @@ The timeline below presents the expected benchmarks for the dissertation researc
 \midrule
 
 Fall 2026 &
-Defend the dissertation proposal on October 8, 2026. Examine reconstructed Mu2e data products, including stored helix parameterizations and covariance matrices. Identify limitations of the existing vertexing procedure and define the requirements for a generalized, robust vertexing workflow. &
-Approved dissertation proposal; documented reconstruction-product study; vertexing-development plan and initial technical benchmarks. \\
+Defend the dissertation proposal on October 8, 2026. Examine reconstructed Mu2e data products, including stored helix parameterizations and covariance matrices. Define the requirements for a generalized and robust vertexing workflow. &
+Approved dissertation proposal; reconstruction-product study; vertexing-development plan and technical benchmarks. \\
 \addlinespace
 
 Spring 2027 &
-Develop an analyzable helix-data structure and investigate common-origin position and time reconstruction using helical parameterizations. Implement and validate initial improvements to the vertexing module using pure \(\muEtoEE\) simulation. Begin studying individual backgrounds using the existing back-to-back generator. &
-Prototype helix-analysis data product; preliminary generalized vertexing module; initial validation results; individual-background study framework. \\
+Develop an analyzable helix-data structure and investigate common-origin position and time reconstruction using helical parameterizations. Implement and test initial improvements to the vertexing module. Begin individual background studies with the existing back-to-back generator. &
+Prototype helix-analysis data product; preliminary vertexing module; pure-process validation results; individual-background study framework. \\
 \addlinespace
 
 Summer 2027 &
-Refine and integrate the vertexing workflow into the Mu2e art and FHiCL environment. Consult with the Mu2e production team regarding large-scale mixing procedures. Produce initial background-overlaid samples and investigate DIO pileup at half field. &
-Validated vertexing workflow; analyzable preliminary mixed samples; initial DIO pileup and beam-intensity requirements; vertexing technical documentation. \\
+Refine and integrate the vertexing workflow into the Mu2e art and FHiCL environment. Consult the production team regarding large-scale mixing procedures. Produce initial background-overlaid samples and investigate DIO pileup at half field. &
+Validated vertexing workflow; preliminary mixed samples; initial DIO pileup and beam-intensity requirements; vertexing documentation. \\
 \addlinespace
 
 Fall 2027 &
-Expand mixed-sample studies to include DIO, cosmic-ray, radiative pion-capture, radiative muon-capture, and beam-related backgrounds. Develop improved signal--background discrimination criteria. Implement the completed theoretical differential templates and interaction weights in the Mu2e generator, then begin high-statistics production. Establish the statistical-analysis framework, including definitions of the sensitivity metric, signal and background hypotheses, and required confidence or significance levels. &
-Mixed-background characterization results; preliminary track-discrimination procedure; theoretically weighted \(\muEtoEE\) generator; initial high-statistics samples; preliminary statistical-analysis framework. \\
+Expand mixing studies to include DIO, cosmic-ray, radiative pion-capture, radiative muon-capture, and beam-related backgrounds. Develop classical signal--background discrimination criteria. Implement theoretical differential templates and interaction weights in the Mu2e generator. &
+Mixed-background characterization results; preliminary discrimination procedure; theoretically weighted \(\muEtoEE\) generator; high-statistics production plan. \\
 \addlinespace
 
 Spring 2028 &
-Use the full generator and mixed samples to complete the sensitivity study. Validate simulation configuration, reconstruction efficiency, and signal selections. Apply the statistical-analysis framework to determine signal visibility, required identified-event counts, proton-on-target intensity, and wall-clock time needed to meet or exceed existing limits. Complete dissertation writing and defense preparation. &
-Full sensitivity estimate for the \(\muEtoEE\) channel; statistical-analysis toolbox; required event-count, beam-intensity, and run-duration estimates; recommended experimental configuration; dissertation submitted and defended; Mu2e internal note and publication-ready results. \\
+Validate and produce high-statistics samples using the full generator. Construct updated mixed samples and evaluate reconstruction performance. Define reconstructed feature variables and the background-only training sample for ML anomaly detection. &
+Validated full-generator samples; updated mixed simulation data set; ML feature set and background-training data; preliminary statistical-analysis framework. \\
+\addlinespace
+
+Summer 2028 &
+Develop, train, and test ML anomaly-detection tools using reconstructed background-only and mixed samples. Compare ML-based discrimination with classical selections. Establish the statistical procedures, including Feldman--Cousins confidence intervals and sensitivity metrics. &
+Trained and validated anomaly-detection model; comparison of classical and ML discrimination; statistical-analysis toolbox. \\
+\addlinespace
+
+Fall 2028--Winter 2028 &
+Perform the final sensitivity study using the full generator, mixed samples, classical selections, and ML-assisted discrimination. Determine expected signal visibility, required event counts, proton-on-target intensity, and wall-clock time for relevant confidence or significance targets. Complete dissertation writing, review, and defense preparation. &
+Full \(\muEtoEE\) sensitivity estimate; recommended run configuration and duration; internal note and publication-ready results; completed and defended dissertation. \\
 \bottomrule
 \end{tabular}
 \end{table}
+\clearpage
 \end{landscape}
+
 \restoregeometry
 
 \bibliographystyle{unsrt}

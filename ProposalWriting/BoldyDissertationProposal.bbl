@@ -3,7 +3,7 @@
 \bibitem{Brivio_2019}
 Ilaria Brivio and Michael Trott.
 \newblock The standard model as an effective field theory.
-\newblock {\em Physics Reports}, 793:1–98, February 2019.
+\newblock {\em Physics Reports}, 793:1--98, February 2019.
 
 \bibitem{CalibbiSignorelli2018CLFVIntro}
 Lorenzo Calibbi and Giovanni Signorelli.
@@ -37,6 +37,11 @@ Yuichi Uesaka, Yoshitaka Kuno, Joe Sato, Toru Sato, and Masato Yamanaka.
   in muonic atoms by contact interactions.
 \newblock {\em Phys. Rev. D}, 93:076006, Apr 2016.
 
+\bibitem{KumarPetrov2026MuonicAtoms}
+Girish Kumar and Alexey~A. Petrov.
+\newblock Axion-like particles and lepton flavor violation in muonic atoms,
+  2026.
+
 \bibitem{Bernstein2019}
 Robert~H. Bernstein.
 \newblock The mu2e experiment.
@@ -63,6 +68,6 @@ Vasilis Belis, Patrick Odagiu, and Thea~Klaeboe Aarrestad.
 Gary~J. Feldman and Robert~D. Cousins.
 \newblock Unified approach to the classical statistical analysis of small
   signals.
-\newblock {\em Physical Review D}, 57(7):3873–3889, April 1998.
+\newblock {\em Physical Review D}, 57(7):3873--3889, April 1998.
 
 \end{thebibliography}
